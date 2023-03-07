@@ -32,8 +32,10 @@ while True:
             with open(os.path.join(BASE_DIR, 'up_url.txt'), 'w+') as f:
                 f.write(up_url)
                 f.close()
+                print('Update Detected!')
             asyncio.run(main())
         else:
             f.close()
+            print('No Update')
     
     time.sleep(600)
